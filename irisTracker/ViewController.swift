@@ -70,22 +70,21 @@ extension ViewController {
         var fileStrData:String = ""
         let fileName = isIris ? "iris_position.csv" : "face_position.csv"
         
-        for i in 1..<(fileArrData[0].count + 1) {
-            if i == fileArrData[0].count {
+        for i in 0..<fileArrData[0].count {
+            if i == (fileArrData[0].count - 1) {
                 fileStrData += "x\(i),y\(i),z\(i)\n"
             } else {
                 fileStrData += "x\(i),y\(i),z\(i),"
             }
         }
+        
         for singleArray in fileArrData{
-            var count = 0
-            for data in singleArray {
-                if count == singleArray.count - 1 {
-                    fileStrData += "\(data)\n"
+            for i in 0..<singleArray.count {
+                if i == (singleArray.count - 1) {
+                    fileStrData += "\(singleArray[i])\n"
                 } else {
-                    fileStrData += "\(data),"
+                    fileStrData += "\(singleArray[i]),"
                 }
-                count += 1
             }
         }
         
