@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet var leftEyeLabel: UILabel!
     
     // MARK: Variables
-    var irisTracker: MPIrisTracker!
+    var irisTracker: MPIrisTrackerH!
     var documentInteraction: UIDocumentInteractionController!
     var irisPosition: [[String]] = []
     var facePosition: [[String]] = []
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        irisTracker = MPIrisTracker()
+        irisTracker = MPIrisTrackerH()
         irisTracker.delegate = self
         irisTracker.start()
     }
@@ -40,11 +40,11 @@ class ViewController: UIViewController {
 
 // MARK: Iris Detector Delegate Method
 extension ViewController: MPTrackerDelegate {
-    func faceMeshDidUpdate(_ tracker: MPIrisTracker!, didOutputLandmarks landmarks: [MPLandmark]!, timestamp: Int) {
+    func faceMeshDidUpdate(_ tracker: MPIrisTrackerH!, didOutputLandmarks landmarks: [MPLandmark]!, timestamp: Int) {
         self.facePosition.append(Array(landmarks).map { "\($0.x),\($0.y),\($0.z)" })
     }
     
-    func irisTrackingDidUpdate(_ tracker: MPIrisTracker!, didOutputLandmarks landmarks: [MPLandmark]!, timestamp: Int) {
+    func irisTrackingDidUpdate(_ tracker: MPIrisTrackerH!, didOutputLandmarks landmarks: [MPLandmark]!, timestamp: Int) {
         DispatchQueue.main.async {
             self.rightEyeLabel.text = "Right Eye: x=\(String(format: "%01.4f", landmarks[0].x)) y=\(String(format: "%01.4f", landmarks[0].y))"
             self.leftEyeLabel.text = "Left Eye: x=\(String(format: "%01.4f", landmarks[5].x)) y=\(String(format: "%01.4f", landmarks[5].y))"
@@ -52,11 +52,11 @@ extension ViewController: MPTrackerDelegate {
         }
     }
     
-    func frameWillUpdate(_ tracker: MPIrisTracker!, didOutputPixelBuffer pixelBuffer: CVPixelBuffer!, timestamp: Int) {
+    func frameWillUpdate(_ tracker: MPIrisTrackerH!, didOutputPixelBuffer pixelBuffer: CVPixelBuffer!, timestamp: Int) {
         // Pixel Buffer is original image
     }
     
-    func frameDidUpdate(_ tracker: MPIrisTracker!, didOutputPixelBuffer pixelBuffer: CVPixelBuffer!) {
+    func frameDidUpdate(_ tracker: MPIrisTrackerH!, didOutputPixelBuffer pixelBuffer: CVPixelBuffer!) {
         // Pixel Buffer is anotated image
         guard let image = UIImage(pixelBuffer: pixelBuffer) else { return }
         DispatchQueue.main.async {
@@ -101,7 +101,7 @@ extension ViewController {
         documentInteraction = UIDocumentInteractionController()
         documentInteraction.url = FilePath
         
-        if !(documentInteraction?.presentOpenInMenu(from: self.view.frame, in: self.view, animated: true))! {
+        if !(documentInteraction?.presentOpenInMenu(from:  CGRect(x: 0, y: 0, width: 10, height: 10), in: self.view, animated: true))! {
             let alert = UIAlertController(title: "Failed to send", message: "Cannot find available apps", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)

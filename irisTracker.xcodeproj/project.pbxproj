@@ -13,9 +13,13 @@
 		651AC62926844F58007323F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651AC62726844F58007323F0 /* Main.storyboard */; };
 		651AC62B26844F58007323F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 651AC62A26844F58007323F0 /* Assets.xcassets */; };
 		651AC62E26844F58007323F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651AC62C26844F58007323F0 /* LaunchScreen.storyboard */; };
+		659DB457268D809600BF8737 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659DB456268D809600BF8737 /* UIView+.swift */; };
+		659DB459268D80CF00BF8737 /* FocusingOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659DB458268D80CF00BF8737 /* FocusingOneViewController.swift */; };
+		659DB45B268D821600BF8737 /* DoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659DB45A268D821600BF8737 /* DoneViewController.swift */; };
+		659DB45D268D83A100BF8737 /* LookingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659DB45C268D83A100BF8737 /* LookingScreenViewController.swift */; };
 		65AFAF5526846AD000D65310 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AFAF5426846AD000D65310 /* UIImage+.swift */; };
-		65AFAF5926846F6600D65310 /* MPIrisTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65AFAF5726846F6200D65310 /* MPIrisTracker.framework */; };
-		65AFAF5A26846F6600D65310 /* MPIrisTracker.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65AFAF5726846F6200D65310 /* MPIrisTracker.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		65EEAA0B2689B05C00E87332 /* MPIrisTrackerH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65EEAA092689B05700E87332 /* MPIrisTrackerH.framework */; };
+		65EEAA0C2689B05C00E87332 /* MPIrisTrackerH.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65EEAA092689B05700E87332 /* MPIrisTrackerH.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +29,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				65AFAF5A26846F6600D65310 /* MPIrisTracker.framework in Embed Frameworks */,
+				65EEAA0C2689B05C00E87332 /* MPIrisTrackerH.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,9 +45,13 @@
 		651AC62A26844F58007323F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		651AC62D26844F58007323F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		651AC62F26844F58007323F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		659DB456268D809600BF8737 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		659DB458268D80CF00BF8737 /* FocusingOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusingOneViewController.swift; sourceTree = "<group>"; };
+		659DB45A268D821600BF8737 /* DoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneViewController.swift; sourceTree = "<group>"; };
+		659DB45C268D83A100BF8737 /* LookingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookingScreenViewController.swift; sourceTree = "<group>"; };
 		65AFAF51268466D000D65310 /* irisTracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "irisTracker-Bridging-Header.h"; sourceTree = "<group>"; };
 		65AFAF5426846AD000D65310 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
-		65AFAF5726846F6200D65310 /* MPIrisTracker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MPIrisTracker.framework; sourceTree = "<group>"; };
+		65EEAA092689B05700E87332 /* MPIrisTrackerH.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MPIrisTrackerH.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65AFAF5926846F6600D65310 /* MPIrisTracker.framework in Frameworks */,
+				65EEAA0B2689B05C00E87332 /* MPIrisTrackerH.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +95,10 @@
 				651AC62F26844F58007323F0 /* Info.plist */,
 				65AFAF51268466D000D65310 /* irisTracker-Bridging-Header.h */,
 				65AFAF5426846AD000D65310 /* UIImage+.swift */,
+				659DB456268D809600BF8737 /* UIView+.swift */,
+				659DB458268D80CF00BF8737 /* FocusingOneViewController.swift */,
+				659DB45A268D821600BF8737 /* DoneViewController.swift */,
+				659DB45C268D83A100BF8737 /* LookingScreenViewController.swift */,
 			);
 			path = irisTracker;
 			sourceTree = "<group>";
@@ -94,7 +106,7 @@
 		651AC63526844F5F007323F0 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				65AFAF5726846F6200D65310 /* MPIrisTracker.framework */,
+				65EEAA092689B05700E87332 /* MPIrisTrackerH.framework */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -171,10 +183,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				659DB45B268D821600BF8737 /* DoneViewController.swift in Sources */,
 				651AC62626844F58007323F0 /* ViewController.swift in Sources */,
+				659DB45D268D83A100BF8737 /* LookingScreenViewController.swift in Sources */,
+				659DB459268D80CF00BF8737 /* FocusingOneViewController.swift in Sources */,
 				65AFAF5526846AD000D65310 /* UIImage+.swift in Sources */,
 				651AC62226844F58007323F0 /* AppDelegate.swift in Sources */,
 				651AC62426844F58007323F0 /* SceneDelegate.swift in Sources */,
+				659DB457268D809600BF8737 /* UIView+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,7 +267,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -306,7 +322,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -331,6 +347,7 @@
 					"$(PROJECT_DIR)/Framework",
 				);
 				INFOPLIST_FILE = irisTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -360,6 +377,7 @@
 					"$(PROJECT_DIR)/Framework",
 				);
 				INFOPLIST_FILE = irisTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
