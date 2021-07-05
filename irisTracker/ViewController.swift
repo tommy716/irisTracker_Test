@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     var documentInteraction: UIDocumentInteractionController!
     var irisPosition: [[String]] = []
     var facePosition: [[String]] = []
+    var leftEye: Eye?
+    var rightEye: Eye?
     
     // MARK: Life cycles
     override func viewDidLoad() {
@@ -44,18 +46,26 @@ class ViewController: UIViewController {
 extension ViewController: MPTrackerDelegate {
     func faceMeshDidUpdate(_ tracker: MPIrisTrackerH!, didOutputLandmarks landmarks: [MPLandmark]!, timestamp: Int) {
         DispatchQueue.main.async {
-            self.leftEyeInfoLabel.text = "左目左端: (\(String(format: "%01.4f", landmarks[33].x)), \(String(format: "%01.4f", landmarks[33].y))), 左目右端: (\(String(format: "%01.4f", landmarks[133].x)), \(String(format: "%01.4f", landmarks[133].y)))"
-            self.rightEyeInfoLabel.text = "右目左端: (\(String(format: "%01.4f", landmarks[398].x)), \(String(format: "%01.4f", landmarks[398].y))), 右目右端: (\(String(format: "%01.4f", landmarks[263].x)), \(String(format: "%01.4f", landmarks[263].y)))"
+            self.leftEyeInfoLabel.text = "左目上: (\(String(format: "%01.4f", landmarks[159].x)), \(String(format: "%01.4f", landmarks[159].y))), 左目下: (\(String(format: "%01.4f", landmarks[145].x)), \(String(format: "%01.4f", landmarks[145].y)))"
+            self.rightEyeInfoLabel.text = "右目上: (\(String(format: "%01.4f", landmarks[386].x)), \(String(format: "%01.4f", landmarks[286].y))), 右目下: (\(String(format: "%01.4f", landmarks[374].x)), \(String(format: "%01.4f", landmarks[374].y)))"
         }
+        self.leftEye = Eye(left: landmarks[33], right: landmarks[133], top: landmarks[159], bottom: landmarks[145])
+        self.rightEye = Eye(left: landmarks[398], right: landmarks[263], top: landmarks[386], bottom: landmarks[374])
         self.facePosition.append(Array(landmarks).map { "\($0.x),\($0.y),\($0.z)" })
     }
     
     func irisTrackingDidUpdate(_ tracker: MPIrisTrackerH!, didOutputLandmarks landmarks: [MPLandmark]!, timestamp: Int) {
         DispatchQueue.main.async {
-            self.rightEyeLabel.text = "Right Eye: x=\(String(format: "%01.4f", landmarks[5].x)) y=\(String(format: "%01.4f", landmarks[5].y))"
-            self.leftEyeLabel.text = "Left Eye: x=\(String(format: "%01.4f", landmarks[0].x)) y=\(String(format: "%01.4f", landmarks[0].y))"
-            self.irisPosition.append(Array(landmarks).map { "\($0.x),\($0.y),\($0.z)" })
+            if self.leftEye != nil {
+                let relativeCoordinate = self.leftEye!.calculateRelativePosition(iris: landmarks[0])
+                self.leftEyeLabel.text = "Left Eye: x=\(String(format: "%01.4f", relativeCoordinate.x)) y=\(String(format: "%01.4f", relativeCoordinate.y))"
+            }
+            if self.rightEye != nil {
+                let relativeCoordinate = self.rightEye!.calculateRelativePosition(iris: landmarks[5])
+                self.rightEyeLabel.text = "Right Eye: x=\(String(format: "%01.4f", relativeCoordinate.x)) y=\(String(format: "%01.4f", relativeCoordinate.y))"
+            }
         }
+        self.irisPosition.append(Array(landmarks).map { "\($0.x),\($0.y),\($0.z)" })
     }
     
     func frameWillUpdate(_ tracker: MPIrisTrackerH!, didOutputPixelBuffer pixelBuffer: CVPixelBuffer!, timestamp: Int) {

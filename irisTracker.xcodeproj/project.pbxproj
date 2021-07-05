@@ -18,6 +18,7 @@
 		659DB45B268D821600BF8737 /* DoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659DB45A268D821600BF8737 /* DoneViewController.swift */; };
 		659DB45D268D83A100BF8737 /* LookingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659DB45C268D83A100BF8737 /* LookingScreenViewController.swift */; };
 		65AFAF5526846AD000D65310 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AFAF5426846AD000D65310 /* UIImage+.swift */; };
+		65E367682692DD7400C7760D /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E367672692DD7400C7760D /* Const.swift */; };
 		65EEAA0B2689B05C00E87332 /* MPIrisTrackerH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65EEAA092689B05700E87332 /* MPIrisTrackerH.framework */; };
 		65EEAA0C2689B05C00E87332 /* MPIrisTrackerH.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65EEAA092689B05700E87332 /* MPIrisTrackerH.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		659DB45C268D83A100BF8737 /* LookingScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookingScreenViewController.swift; sourceTree = "<group>"; };
 		65AFAF51268466D000D65310 /* irisTracker-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "irisTracker-Bridging-Header.h"; sourceTree = "<group>"; };
 		65AFAF5426846AD000D65310 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		65E367672692DD7400C7760D /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		65EEAA092689B05700E87332 /* MPIrisTrackerH.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MPIrisTrackerH.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 				659DB458268D80CF00BF8737 /* FocusingOneViewController.swift */,
 				659DB45A268D821600BF8737 /* DoneViewController.swift */,
 				659DB45C268D83A100BF8737 /* LookingScreenViewController.swift */,
+				65E367672692DD7400C7760D /* Const.swift */,
 			);
 			path = irisTracker;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				651AC62226844F58007323F0 /* AppDelegate.swift in Sources */,
 				651AC62426844F58007323F0 /* SceneDelegate.swift in Sources */,
 				659DB457268D809600BF8737 /* UIView+.swift in Sources */,
+				65E367682692DD7400C7760D /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
