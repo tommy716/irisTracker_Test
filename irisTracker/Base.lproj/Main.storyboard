@@ -23,50 +23,77 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgS-do-sHZ">
                                 <rect key="frame" x="0.0" y="854" width="1366" height="150"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8wm-57-wnh">
-                                        <rect key="frame" x="20" y="20" width="1326" height="110"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yT5-FO-FXM">
+                                        <rect key="frame" x="20" y="20" width="1326" height="61"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVO-G7-CLX">
-                                                <rect key="frame" x="0.0" y="0.0" width="1326" height="23.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpb-fw-EZg">
-                                                <rect key="frame" x="0.0" y="43.5" width="1326" height="23"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RAP-TC-u66">
-                                                <rect key="frame" x="0.0" y="86.5" width="1326" height="23.5"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8wm-57-wnh">
+                                                <rect key="frame" x="0.0" y="0.0" width="663" height="61"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehe-gN-FSJ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="653" height="23.5"/>
-                                                        <state key="normal" title="Export Iris Data"/>
-                                                        <connections>
-                                                            <action selector="exportIrisData" destination="BYZ-38-t0r" eventType="touchUpInside" id="sjS-tP-L9N"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Vi-VK-trw">
-                                                        <rect key="frame" x="673" y="0.0" width="653" height="23.5"/>
-                                                        <state key="normal" title="Export Face Data"/>
-                                                        <connections>
-                                                            <action selector="exportFaceData" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZWZ-lq-a8Z"/>
-                                                        </connections>
-                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lVO-G7-CLX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="663" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpb-fw-EZg">
+                                                        <rect key="frame" x="0.0" y="40.5" width="663" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                             </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="U7w-1h-KVc">
+                                                <rect key="frame" x="663" y="0.0" width="663" height="61"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDx-WG-4dv">
+                                                        <rect key="frame" x="0.0" y="0.0" width="663" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I1f-kx-HfN">
+                                                        <rect key="frame" x="0.0" y="40.5" width="663" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="U7w-1h-KVc" firstAttribute="width" secondItem="8wm-57-wnh" secondAttribute="width" id="Bvt-33-bmo"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RAP-TC-u66">
+                                        <rect key="frame" x="555" y="101" width="256" height="39"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehe-gN-FSJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="118" height="39"/>
+                                                <state key="normal" title="Export Iris Data"/>
+                                                <connections>
+                                                    <action selector="exportIrisData" destination="BYZ-38-t0r" eventType="touchUpInside" id="sjS-tP-L9N"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Vi-VK-trw">
+                                                <rect key="frame" x="138" y="0.0" width="118" height="39"/>
+                                                <state key="normal" title="Export Face Data"/>
+                                                <connections>
+                                                    <action selector="exportFaceData" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZWZ-lq-a8Z"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="8wm-57-wnh" secondAttribute="bottom" constant="20" id="TNQ-V1-PsI"/>
-                                    <constraint firstItem="8wm-57-wnh" firstAttribute="leading" secondItem="cgS-do-sHZ" secondAttribute="leading" constant="20" id="VQp-1U-DQg"/>
+                                    <constraint firstAttribute="trailing" secondItem="yT5-FO-FXM" secondAttribute="trailing" constant="20" id="4Mw-EA-xtg"/>
+                                    <constraint firstItem="yT5-FO-FXM" firstAttribute="top" secondItem="cgS-do-sHZ" secondAttribute="top" constant="20" id="8ye-5I-4aP"/>
+                                    <constraint firstItem="yT5-FO-FXM" firstAttribute="leading" secondItem="cgS-do-sHZ" secondAttribute="leading" constant="20" id="PSE-nh-gyy"/>
+                                    <constraint firstItem="RAP-TC-u66" firstAttribute="top" secondItem="yT5-FO-FXM" secondAttribute="bottom" constant="20" id="Ugb-my-7WA"/>
                                     <constraint firstAttribute="height" constant="150" id="Vjx-Es-iNa"/>
-                                    <constraint firstAttribute="trailing" secondItem="8wm-57-wnh" secondAttribute="trailing" constant="20" id="fRW-5z-ttb"/>
-                                    <constraint firstItem="8wm-57-wnh" firstAttribute="top" secondItem="cgS-do-sHZ" secondAttribute="top" constant="20" id="lZg-eJ-C0G"/>
+                                    <constraint firstAttribute="bottom" secondItem="RAP-TC-u66" secondAttribute="bottom" constant="10" id="uDS-oK-07V"/>
+                                    <constraint firstItem="RAP-TC-u66" firstAttribute="centerX" secondItem="cgS-do-sHZ" secondAttribute="centerX" id="z3W-8T-gfs"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -85,7 +112,9 @@
                     <navigationItem key="navigationItem" id="CXz-0a-9SS"/>
                     <connections>
                         <outlet property="imageView" destination="y6Y-J1-hGd" id="aJY-jP-i76"/>
+                        <outlet property="leftEyeInfoLabel" destination="UDx-WG-4dv" id="HGl-4C-wWv"/>
                         <outlet property="leftEyeLabel" destination="lVO-G7-CLX" id="nnC-YY-vMW"/>
+                        <outlet property="rightEyeInfoLabel" destination="I1f-kx-HfN" id="m3n-DD-cfz"/>
                         <outlet property="rightEyeLabel" destination="fpb-fw-EZg" id="xz4-1J-97X"/>
                     </connections>
                 </viewController>

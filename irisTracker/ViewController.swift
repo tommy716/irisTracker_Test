@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var rightEyeLabel: UILabel!
     @IBOutlet var leftEyeLabel: UILabel!
+    @IBOutlet var leftEyeInfoLabel: UILabel!
+    @IBOutlet var rightEyeInfoLabel: UILabel!
     
     // MARK: Variables
     var irisTracker: MPIrisTrackerH!
@@ -41,13 +43,17 @@ class ViewController: UIViewController {
 // MARK: Iris Detector Delegate Method
 extension ViewController: MPTrackerDelegate {
     func faceMeshDidUpdate(_ tracker: MPIrisTrackerH!, didOutputLandmarks landmarks: [MPLandmark]!, timestamp: Int) {
+        DispatchQueue.main.async {
+            self.leftEyeInfoLabel.text = "左目左端: (\(String(format: "%01.4f", landmarks[33].x)), \(String(format: "%01.4f", landmarks[33].y))), 左目右端: (\(String(format: "%01.4f", landmarks[133].x)), \(String(format: "%01.4f", landmarks[133].y)))"
+            self.rightEyeInfoLabel.text = "右目左端: (\(String(format: "%01.4f", landmarks[398].x)), \(String(format: "%01.4f", landmarks[398].y))), 右目右端: (\(String(format: "%01.4f", landmarks[263].x)), \(String(format: "%01.4f", landmarks[263].y)))"
+        }
         self.facePosition.append(Array(landmarks).map { "\($0.x),\($0.y),\($0.z)" })
     }
     
     func irisTrackingDidUpdate(_ tracker: MPIrisTrackerH!, didOutputLandmarks landmarks: [MPLandmark]!, timestamp: Int) {
         DispatchQueue.main.async {
-            self.rightEyeLabel.text = "Right Eye: x=\(String(format: "%01.4f", landmarks[0].x)) y=\(String(format: "%01.4f", landmarks[0].y))"
-            self.leftEyeLabel.text = "Left Eye: x=\(String(format: "%01.4f", landmarks[5].x)) y=\(String(format: "%01.4f", landmarks[5].y))"
+            self.rightEyeLabel.text = "Right Eye: x=\(String(format: "%01.4f", landmarks[5].x)) y=\(String(format: "%01.4f", landmarks[5].y))"
+            self.leftEyeLabel.text = "Left Eye: x=\(String(format: "%01.4f", landmarks[0].x)) y=\(String(format: "%01.4f", landmarks[0].y))"
             self.irisPosition.append(Array(landmarks).map { "\($0.x),\($0.y),\($0.z)" })
         }
     }
