@@ -29,6 +29,11 @@ class Eye {
         let y = (iris.y - centerY) * multiplierY
         return Coordinate(x: x, y: y)
     }
+    
+    func isBlinking() -> Bool {
+        // TODO: 閾値の調整
+        return (self.bottomEdge.y - self.topEdge.y) < 0.01 ? true : false
+    }
 }
 
 class Coordinate {

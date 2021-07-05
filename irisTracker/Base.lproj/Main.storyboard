@@ -65,8 +65,8 @@
                                             <constraint firstItem="U7w-1h-KVc" firstAttribute="width" secondItem="8wm-57-wnh" secondAttribute="width" id="Bvt-33-bmo"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RAP-TC-u66">
-                                        <rect key="frame" x="555" y="101" width="256" height="39"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="RAP-TC-u66">
+                                        <rect key="frame" x="515" y="101" width="336" height="39"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehe-gN-FSJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="118" height="39"/>
@@ -76,7 +76,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Vi-VK-trw">
-                                                <rect key="frame" x="138" y="0.0" width="118" height="39"/>
+                                                <rect key="frame" x="218" y="0.0" width="118" height="39"/>
                                                 <state key="normal" title="Export Face Data"/>
                                                 <connections>
                                                     <action selector="exportFaceData" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZWZ-lq-a8Z"/>

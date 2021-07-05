@@ -58,10 +58,12 @@ extension ViewController: MPTrackerDelegate {
         DispatchQueue.main.async {
             if self.leftEye != nil {
                 let relativeCoordinate = self.leftEye!.calculateRelativePosition(iris: landmarks[0])
+                print(self.leftEye!.isBlinking())
                 self.leftEyeLabel.text = "Left Eye: x=\(String(format: "%01.4f", relativeCoordinate.x)) y=\(String(format: "%01.4f", relativeCoordinate.y))"
             }
             if self.rightEye != nil {
                 let relativeCoordinate = self.rightEye!.calculateRelativePosition(iris: landmarks[5])
+                print(self.rightEye!.isBlinking())
                 self.rightEyeLabel.text = "Right Eye: x=\(String(format: "%01.4f", relativeCoordinate.x)) y=\(String(format: "%01.4f", relativeCoordinate.y))"
             }
         }
